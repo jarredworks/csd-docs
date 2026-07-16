@@ -154,7 +154,7 @@ You will need to create a cabinet.xml file and save it as “cabinet.xml”. Cre
 
 - Sample file for this build (you will likely need to adjust the COM PORT to the one your PC uses)
 
-'''
+```
 <?xml version="1.0"?>
 <Cabinet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Name>AddressableLEDSetup</Name>
@@ -276,8 +276,7 @@ You will need to create a cabinet.xml file and save it as “cabinet.xml”. Cre
     </LedWizEquivalent>
   </Toys>
 </Cabinet>
-'''
-
+```
   - Copy this text in the cabinet.xml file and save.
 - For differing setups:
   - The cabinet file for Addressable LEDs is a little complicated to build, so I have created a simple online helper to generate it for you. Simply enter your specific needs and it will be created. Copy the text from the code created below and save it as `cabinet.xml` inside your `C:/DirectOutput/config` directory.
