@@ -101,4 +101,66 @@ Warning: This software has been designed to control hardware which is connected 
 
 *At this point all of your PinOne hardware should have the necessary tools to function properly. I recommend you stop here to reboot your computer and test out the configuration in PinUp Popper/VPX. If if works congratulations! You have a functioning Vpin cabinet! If it does not work take a look at these troubleshooting steps and/or contact the support pages and forums for help! Next steps for DOF configuration are the Addressable LEDs. Remember SSF is a separate system. 
 
- 
+## Addressable LEDS 
+### Testing your setup and updating firmware
+
+You can use the config tool to test your outputs and make sure they are all setup OK before trying to get them working in DOF. Download it here: 
+
+[![Get the config tool](../PinOne/Configuring/img/button.svg)](https://github.com/philipellisis/wemos-configurator/releases/latest/download/CSDAddressableControllerTool.exe)
+
+
+## Configuring Addressable LEDs for DOF
+
+### Prerequisites
+
+Before configuring ALEDs in DOF, you need to have DOF installed. To install and configure DOF, follow the steps mentioned above. After DOF is installed, you can walk through the steps below to configure your ALEDs. The steps below will work if you already have DOF configured for other toys already and they will also work if this is your first time configuring DOF.
+
+### Creating a global config file
+1. Creating a GlobalConfig_B2SServer.xml file.
+   - In your directoutput folder you will need to access and edit your GlobalConfig_B2SServer.xml. You can make the necessary changes by opening the file in Notepad and then saving once the necessary changes are made.
+   - The file location is: C:/DirectOutput/config
+   - Right click on GlobalConfig_B2SServer.xml and select “Open with” and then select “Notepad”.
+ - This will open the file so that you may make changes.
+ - Delete all the current contents of the file.
+ - Paste this into the file: 
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<!--Global configuration for the DirectOutput framework.-->
+<!--Saved by DirectOutput Version 3.1.8715.331: 2023-11-23 11-41-48-->
+<GlobalConfig>
+  <LedWizDefaultMinCommandIntervalMs>10</LedWizDefaultMinCommandIntervalMs>
+  <LedControlMinimumEffectDurationMs>60</LedControlMinimumEffectDurationMs>
+  <LedControlMinimumRGBEffectDurationMs>120</LedControlMinimumRGBEffectDurationMs>
+  <PacLedDefaultMinCommandIntervalMs>10</PacLedDefaultMinCommandIntervalMs>
+  <IniFilesPath>C:\DirectOutput\Config</IniFilesPath>
+  <CabinetConfigFilePattern>C:\DirectOutput\Config\cabinet.xml</CabinetConfigFilePattern>
+  <TableConfigFilePatterns />
+  <EnableLogging>true</EnableLogging>
+  <ClearLogOnSessionStart>true</ClearLogOnSessionStart>
+  <LogFilePattern>.\DirectOutput.log</LogFilePattern>
+</GlobalConfig>
+```
+2. Save the file.
+
+### Relocating your ini files
+
+When DOF is configured without a Cabinet.xml file, you can just put your ini files in the same directory as DOF and it will work fine, if you have a cabinet file you should put all your ini files in the C:/DirectOutput/config directory to ensure they are all read in. This also keeps things a little cleaner now that you will have more than one file for your configuration.
+
+### Creating your cabinet file
+In addition to a directoutput.ini file and GlobalConfig_B2SServer.xml file, your addressable LEDs will need a cabinet.xml file.
+
+You will need to create a cabinet.xml file and save it as “cabinet.xml”. Create the new file in this location: C:/DirectOutput/config
+
+Sample file for this build: (on its way!)
+
+For differing setups:
+- The cabinet file for Addressable LEDs is a little complicated to build, so I have created a simple online helper to generate it for you. Simply enter your specific needs and it will be created. Copy the text from the code created below and save it as `cabinet.xml` inside your `C:/DirectOutput/config` directory.
+
+You can find the cabinet file generator [Here](./cabinetGenerator)
+
+### Final Steps
+
+At this point your `C:/DirectOutput/config` directory should look like the following below:
+
+![image](./img/aled1.png)
