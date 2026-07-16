@@ -96,7 +96,7 @@ Warning: This software has been designed to control hardware which is connected 
       - Navigate to the “directouput” folder and open your “config” folder.
       - In the “config” folder paste the directoutput.ini files.
         - I also recommend pasting the directoutput.ini files in the “x64”, “x86”, and “directoutput” folder. This step is technically unnecessary; however, most DOF issue occur because of on improper file path. This extra step takes a shotgun approach and has the directoutput.ini files everywhere DOF might look for them in case you do mess up the file path.
-    - Your file both should look like this:
+    - Your file path should look like this:
 <img width="804" height="475" alt="Screenshot 2026-07-16 at 3 29 12 PM" src="https://github.com/user-attachments/assets/7fd7b76a-d873-4412-8d98-697d8c5fc76e" />
 
 *At this point all of your PinOne hardware should have the necessary tools to function properly. I recommend you stop here to reboot your computer and test out the configuration in PinUp Popper/VPX. If if works congratulations! You have a functioning Vpin cabinet! If it does not work take a look at these troubleshooting steps and/or contact the support pages and forums for help! Next steps for DOF configuration are the Addressable LEDs. Remember SSF is a separate system. 
@@ -163,4 +163,5 @@ You can find the cabinet file generator [Here](./cabinetGenerator)
 
 At this point your `C:/DirectOutput/config` directory should look like the following below:
 
-![image](./img/aled1.png)
+<img width="804" height="475" alt="Screenshot 2026-07-16 at 3 29 12 PM" src="https://github.com/user-attachments/assets/7fd7b76a-d873-4412-8d98-697d8c5fc76e" />
+
