@@ -63,7 +63,7 @@ Warning: This software has been designed to control hardware which is connected 
 
 3. Navigate to “Devices” under the Cabinets tab.
    - Select “1” under PinOne.
-   - Select “1” under WS2811.
+   - Select “1” under WS2811. (Only if you have addressable LEDs)
      - Note: I am using only these two devices per the set up I have. These two devices covers my PinOne and the ALED kit. SSF is handled separately from DOF.
    - Select “update” to save.
 <img width="1440" height="771" alt="Screenshot 2026-06-18 at 3 15 12 PM" src="https://github.com/user-attachments/assets/966f10b2-7452-4f9c-83e7-2c600b5b5a6d" />
@@ -77,7 +77,7 @@ Warning: This software has been designed to control hardware which is connected 
    - Select update to save.
 <img width="1440" height="777" alt="Screenshot 2026-06-18 at 3 28 43 PM" src="https://github.com/user-attachments/assets/aa62ed50-a97c-4509-b010-203931b8a8aa" />
 
-6. Select “device” and switch to “WS2811”.
+6. Select “device” and switch to “WS2811”. (This step is only needed if you have addressable LEDs)
    - Configure “WS2811” as pictured.
 <img width="1024" height="569" alt="Screenshot 2026-06-18 at 3 39 17 PM" src="https://github.com/user-attachments/assets/8dfebbc3-a590-4965-a9db-a43d950df74e" />
 
