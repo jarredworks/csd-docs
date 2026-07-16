@@ -290,9 +290,13 @@ You will need to create a cabinet.xml file and save it as “cabinet.xml”. Cre
 
 You can find the cabinet file generator [Here](./cabinetGenerator)
 
-### Final Steps
+### Final Steps For Addressable LEDs
 
 At this point your `C:/DirectOutput/config` directory should look like the following below:
 
 <img width="804" height="475" alt="Screenshot 2026-07-16 at 3 29 12 PM" src="https://github.com/user-attachments/assets/7fd7b76a-d873-4412-8d98-697d8c5fc76e" />
 
+# What's Next?
+At this point all your toys and leds should be operational, now you need to get your SSF going! Here is some set up information for SSF:
+- https://pinball-docs.clevelandsoftwaredesign.com/docs/category/ssf
+- https://www.youtube.com/watch?v=TXzHTG9J9_0&t=40s
