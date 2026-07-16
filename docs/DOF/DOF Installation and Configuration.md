@@ -153,6 +153,11 @@ In addition to a directoutput.ini file and GlobalConfig_B2SServer.xml file, your
 You will need to create a cabinet.xml file and save it as “cabinet.xml”. Create the new file in this location: C:/DirectOutput/config
 
 - Sample file for this build (you will likely need to adjust the COM PORT to the one your PC uses)
+- Addressable LED Kit used for this configuration: https://www.clevelandsoftwaredesign.com/pinball-parts/p/addressable-led-plug-and-play-kit
+  - For this configuration I used:
+    - The ALED Kit with 7 matrix panels
+    - Total ALEDs: 2 strips (JP1-2), 7 panels (JP3-9), x2 daisy-chained speaker rings (JP10). JP1-10 refers to the physical ports on the ALED controller.
+- Copy this text into the cabinet.xml file and save.
 
 ```
 <?xml version="1.0"?>
@@ -277,7 +282,7 @@ You will need to create a cabinet.xml file and save it as “cabinet.xml”. Cre
   </Toys>
 </Cabinet>
 ```
-  - Copy this text in the cabinet.xml file and save.
+
 - For differing setups:
   - The cabinet file for Addressable LEDs is a little complicated to build, so I have created a simple online helper to generate it for you. Simply enter your specific needs and it will be created. Copy the text from the code created below and save it as `cabinet.xml` inside your `C:/DirectOutput/config` directory.
 
