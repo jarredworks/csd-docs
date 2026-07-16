@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # PinOne Mini Machine Quickstart Guide
 
 This is a quick-start guide to test the functionality and set up the PinOne Mini Machine Gaming Controller for PinballFX.
