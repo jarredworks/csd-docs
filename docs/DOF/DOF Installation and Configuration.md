@@ -152,10 +152,136 @@ In addition to a directoutput.ini file and GlobalConfig_B2SServer.xml file, your
 
 You will need to create a cabinet.xml file and save it as “cabinet.xml”. Create the new file in this location: C:/DirectOutput/config
 
-Sample file for this build: (on its way!)
+- Sample file for this build (you will likely need to adjust the COM PORT to the one your PC uses)
 
-For differing setups:
-- The cabinet file for Addressable LEDs is a little complicated to build, so I have created a simple online helper to generate it for you. Simply enter your specific needs and it will be created. Copy the text from the code created below and save it as `cabinet.xml` inside your `C:/DirectOutput/config` directory.
+'''
+<?xml version="1.0"?>
+<Cabinet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>AddressableLEDSetup</Name>
+  <OutputControllers>
+    <WemosD1MPStripController>
+      <Name>LED Strips 0</Name>
+      <NumberOfLedsStrip1>144</NumberOfLedsStrip1>
+      <NumberOfLedsStrip2>144</NumberOfLedsStrip2>
+      <NumberOfLedsStrip3>256</NumberOfLedsStrip3>
+      <NumberOfLedsStrip4>256</NumberOfLedsStrip4>
+      <NumberOfLedsStrip5>256</NumberOfLedsStrip5>
+      <NumberOfLedsStrip6>256</NumberOfLedsStrip6>
+      <NumberOfLedsStrip7>256</NumberOfLedsStrip7>
+      <NumberOfLedsStrip8>256</NumberOfLedsStrip8>
+      <NumberOfLedsStrip9>256</NumberOfLedsStrip9>
+      <NumberOfLedsStrip10>90</NumberOfLedsStrip10>
+      <ComPortName>COM1</ComPortName>
+      <ComPortTimeOutMs>300</ComPortTimeOutMs>
+      <ComPortBaudRate>2000000</ComPortBaudRate>
+      <ComPortOpenWaitMs>300</ComPortOpenWaitMs>
+      <ComPortHandshakeStartWaitMs>100</ComPortHandshakeStartWaitMs>
+      <ComPortHandshakeEndWaitMs>100</ComPortHandshakeEndWaitMs>
+      <SendPerLedstripLength>true</SendPerLedstripLength>
+      <UseCompression>true</UseCompression>
+      <ComPortDtrEnable>true</ComPortDtrEnable>
+      <TestOnConnect>true</TestOnConnect>
+    </WemosD1MPStripController>
+  </OutputControllers>
+  <Toys>
+    <LedStrip>
+      <Name>Right Side</Name>
+      <Width>1</Width>
+      <Height>144</Height>
+      <LedStripArrangement>LeftRightBottomUp</LedStripArrangement>
+      <ColorOrder>RGB</ColorOrder>
+      <FirstLedNumber>1</FirstLedNumber>
+      <FadingCurveName>SwissLizardsLedCurve</FadingCurveName>
+      <Brightness>100</Brightness>
+      <OutputControllerName>LED Strips 0</OutputControllerName>
+    </LedStrip>
+    <LedStrip>
+      <Name>Left Side</Name>
+      <Width>1</Width>
+      <Height>144</Height>
+      <LedStripArrangement>RightLeftBottomUp</LedStripArrangement>
+      <ColorOrder>RGB</ColorOrder>
+      <FirstLedNumber>145</FirstLedNumber>
+      <FadingCurveName>SwissLizardsLedCurve</FadingCurveName>
+      <Brightness>100</Brightness>
+      <OutputControllerName>LED Strips 0</OutputControllerName>
+    </LedStrip>
+    <LedStrip>
+      <Name>Back Panel</Name>
+      <Width>112</Width>
+      <Height>16</Height>
+      <LedStripArrangement>TopDownAlternateRightLeft</LedStripArrangement>
+      <ColorOrder>RGB</ColorOrder>
+      <FirstLedNumber>289</FirstLedNumber>
+      <FadingCurveName>SwissLizardsLedCurve</FadingCurveName>
+      <Brightness>100</Brightness>
+      <OutputControllerName>LED Strips 0</OutputControllerName>
+    </LedStrip>
+    <LedStrip>
+      <Name>speaker leds</Name>
+      <Width>1</Width>
+      <Height>90</Height>
+      <LedStripArrangement>RightLeftBottomUp</LedStripArrangement>
+      <ColorOrder>RGB</ColorOrder>
+      <FirstLedNumber>2081</FirstLedNumber>
+      <FadingCurveName>SwissLizardsLedCurve</FadingCurveName>
+      <Brightness>100</Brightness>
+      <OutputControllerName>LED Strips 0</OutputControllerName>
+    </LedStrip>
+    <LedWizEquivalent>
+      <Name>LedWizEquivalent 30</Name>
+      <LedWizNumber>30</LedWizNumber>
+      <Outputs>
+        <LedWizEquivalentOutput>
+          <OutputName>Right Side</OutputName>
+          <LedWizEquivalentOutputNumber>1</LedWizEquivalentOutputNumber>
+        </LedWizEquivalentOutput>
+        <LedWizEquivalentOutput>
+          <OutputName>Left Side</OutputName>
+          <LedWizEquivalentOutputNumber>4</LedWizEquivalentOutputNumber>
+        </LedWizEquivalentOutput>
+        <LedWizEquivalentOutput>
+          <OutputName>Back Panel</OutputName>
+          <LedWizEquivalentOutputNumber>7</LedWizEquivalentOutputNumber>
+        </LedWizEquivalentOutput>
+        <LedWizEquivalentOutput>
+          <OutputName>Back Panel</OutputName>
+          <LedWizEquivalentOutputNumber>10</LedWizEquivalentOutputNumber>
+        </LedWizEquivalentOutput>
+        <LedWizEquivalentOutput>
+          <OutputName>Back Panel</OutputName>
+          <LedWizEquivalentOutputNumber>13</LedWizEquivalentOutputNumber>
+        </LedWizEquivalentOutput>
+        <LedWizEquivalentOutput>
+          <OutputName>Back Panel</OutputName>
+          <LedWizEquivalentOutputNumber>16</LedWizEquivalentOutputNumber>
+        </LedWizEquivalentOutput>
+        <LedWizEquivalentOutput>
+          <OutputName>Back Panel</OutputName>
+          <LedWizEquivalentOutputNumber>19</LedWizEquivalentOutputNumber>
+        </LedWizEquivalentOutput>
+        <LedWizEquivalentOutput>
+          <OutputName>Back Panel</OutputName>
+          <LedWizEquivalentOutputNumber>22</LedWizEquivalentOutputNumber>
+        </LedWizEquivalentOutput>
+        <LedWizEquivalentOutput>
+          <OutputName>Back Panel</OutputName>
+          <LedWizEquivalentOutputNumber>25</LedWizEquivalentOutputNumber>
+        </LedWizEquivalentOutput>
+        <LedWizEquivalentOutput>
+          <OutputName>speaker leds</OutputName>
+          <LedWizEquivalentOutputNumber>28</LedWizEquivalentOutputNumber>
+        </LedWizEquivalentOutput>
+      </Outputs>
+    </LedWizEquivalent>
+  </Toys>
+</Cabinet>
+'''
+
+  - Copy this text in the cabinet.xml file and save.
+- For differing setups:
+  - The cabinet file for Addressable LEDs is a little complicated to build, so I have created a simple online helper to generate it for you. Simply enter your specific needs and it will be created. Copy the text from the code created below and save it as `cabinet.xml` inside your `C:/DirectOutput/config` directory.
+
 
 You can find the cabinet file generator [Here](./cabinetGenerator)
 
