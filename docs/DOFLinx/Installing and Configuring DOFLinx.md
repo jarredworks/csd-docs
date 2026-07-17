@@ -14,4 +14,6 @@ What will follow is a demonstration and template for builders to get an idea of 
 
 Any files and configurations that follow will be specifically for CSD products and the specific build that I mentioned directly above. If you are imitating this exact build, then great! You may be able to just take the ones below and be done!
 - Extra instructions on Testing and Assembly of CSD products can be found here:
-  - 
+  - Builders Kit: https://www.youtube.com/watch?v=5BLjU5GOnZk&t=6s
+  - ALED Kit: https://www.youtube.com/watch?v=RJ985EQpjYI&t=127s
+  - SSF Kit: https://www.youtube.com/watch?v=TXzHTG9J9_0&t=39s
